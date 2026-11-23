@@ -1,4 +1,4 @@
-name: Build Web Flappy (PlayCanvas)
+name: Build Flappy world Web (PlayCanvas)
 on:
   push:
     branches: [main]
@@ -14,11 +14,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - run: npm install --legacy-peer-deps
       - run: npm run build
       - name: Upload Web Build (.zip)
         uses: actions/upload-artifact@v4
         with:
-          name: FlappyBird
+          name: flappy-web
           path: dist/
