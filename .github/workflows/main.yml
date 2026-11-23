@@ -1,4 +1,4 @@
-name: Build Web (PlayCanvas)
+name: Build Web Flappy (PlayCanvas)
 on:
   push:
     branches: [main]
